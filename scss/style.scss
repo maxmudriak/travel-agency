@@ -1,0 +1,332 @@
+@import "layout.scss";
+@import "normalize.scss";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+@font-face {
+    font-family: 'Aleo';
+    src: url('../font/aleo-regular-webfont.woff2') format('woff2'),
+         url('../font/aleo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$body-font: 'JosefinSans', sans-serif;
+$second-font: 'Aleo', sans-serif;
+$secondary-font-color: #e8e8e8;
+
+body{
+	font: 400 16px/1.3 $body-font;
+	color:  #fff;
+	border: 15px solid #FFFFFF;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1150px;
+}
+h1,h2,h3,h4,h5,h6 {
+	// margin: 0;
+}
+p {
+	margin: 0;
+}
+.arows-margin {
+	margin-bottom: -5px;
+}
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	color: #FFF;
+	text-decoration: none;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 400 16px/1.3 $second-font;
+	background: #466AFB url(../img/button.png) no-repeat;
+	background-size: cover;
+	text-transform: uppercase;
+	padding: 20px 46px;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+
+.ba-intro {
+	background: #045799 url(../img/heder-bg.jpg) no-repeat;
+	background-size: cover;
+	&__scroll {
+		font-size: 14px;
+		margin-bottom: 0;
+		letter-spacing: 0.2em;
+		&:hover {
+			color: #000;
+		}
+	}
+	&-body {
+		margin: 0 auto;
+		width: 60%;
+		text-align: center;
+		padding: 270px 0 124px;
+		&__title {
+			margin: 0;
+			text-transform: uppercase;
+			font-size: 48px;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+		}
+		&__subtitle {
+			margin-bottom: 47px;
+			font-size: 22px;
+			letter-spacing: 0.3em;
+		}
+		&__search {
+			padding-bottom: 116px;
+			position: relative;
+			& input {
+				padding-left: 40px;
+				padding-right: 150px;
+				display: inline-block;
+				background-color: #fff;
+				font-size: 14px;
+				width: 450px;
+				height: 55px;
+			 	border: 2px solid #fff;
+				color:  #999999;
+				&::-webkit-input-placeholder {
+				    color:  #999999;
+				    padding-left: 7%;
+				    letter-spacing: 0.06em;
+				}
+			}
+		}
+		&__button {
+			position: absolute;
+			right: 15px;
+			top: 2px;
+			background-color: #5474fd;
+			font-family: $second-font;
+			font-size: 14px;
+			vertical-align: middle;
+			border: 2px solid #fff;
+			padding: 16px 2px 16px 41px;
+			text-transform: uppercase;
+		}
+	}
+}
+.ba-nav {
+	background: #5474fd;
+
+	&__logo {
+		float: left;
+		&-title {
+			color:  #ffffff;
+			font-size: 24px;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+	}
+	&__menu {
+		float: right;
+		text-transform: uppercase;
+		padding: 30px 0 0;
+		margin: 0;
+		font-family: $second-font;
+		& li {
+			display: inline-block;
+			list-style: none;
+			padding-left: 40px;
+			font-size: 14px;
+			&:hover {
+				transform: translateY(2px);
+			}
+		}
+	}
+}
+.ba-about {
+	background: #3D3533 url(../img/about-us-bg.png) no-repeat;
+	background-size: cover;
+	&-body {
+		background: rgba(59, 59, 59, 0.9);
+		z-index: 1;
+		padding: 122px 0;
+		&__title {
+			font-family: $second-font;
+			font-size: 36px;
+			font-weight: 400;
+			margin: 73px 0 53px;
+			letter-spacing: 0.01em;
+		}
+		&__text {
+			color: $secondary-font-color;
+			padding-bottom: 36px;
+			line-height: 1.5;
+			letter-spacing: 0.1em;
+		}
+		&__img {
+			padding-left: 60px;
+		}
+		&__img2 {
+			float: right;
+		}
+	}
+}
+.ba-wedo {
+	background: #333;
+	padding: 10px 0 110px;
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: space-around;
+		background: url(../img/Shapesvg.svg) 51% 0% no-repeat;
+		padding-top: 70px;
+		&-element {
+			display: inline-block;
+			list-style: none;
+			font-family: Aleo;
+			color:  #e8e8e8;
+			font-size: 36px;
+			text-align: center;
+			position: relative;
+			padding-top: 90px;
+			& svg {
+				position: absolute;
+				top: 10px;
+				left: 35%;
+			}
+		}
+	}
+}
+.ba-info-travel {
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 232px 0 100px;
+	&-body {
+		width: 48.5%;
+		background: rgba(35,35,35, 0.9);
+		padding: 44px 30px 50px 30px;
+		&__contry {
+			color:  #e8e8e8;
+			font-size: 20px;
+		}
+		&__title {
+			font-size: 20px;
+			margin: 22px 0;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		&__text {
+			color:  #e8e8e8;
+			line-height: 1.6;
+			padding-bottom: 45px;
+		}
+	}
+}
+.ba-button--info-travel {
+	padding: 20px 67px;
+}
+.ba-info-travel-body--left {
+	float: right;
+}
+.ba-feedback {
+	background: #28292A url(../img/feedback-bg.png) no-repeat;
+	background-size: cover;
+	&-body {
+		background: rgba(35,35,35, 0.9);
+		background-size: cover;
+		padding-top: 109px;
+		&__title {
+			font-family: $second-font;
+			font-weight: 400;
+			text-align: center;
+			font-size: 36px;
+			margin: 0 0 89px;
+		}
+	}
+}
+.ba-feedback-element {
+	background-color: #333333;
+	& img {
+		float: left;
+		padding-right: 60px;
+	}
+	&__title {
+		color:  #fefefe;
+		font-size: 20px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin: 45px 0 45px;
+	}
+	&__text {
+		color:  $secondary-font-color;
+	}
+}
+.ba-slide {
+	float: right;
+	padding: 30px 0 140px;
+	&__arow {
+		border: 1px solid #fff;
+	}
+}
+.ba-footer {
+	background: #232323;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 115px 0 55px;
+	&__logo {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		&-title {
+			margin: 0;
+			font-size: 24px;
+		}
+	}
+	&__text {
+		padding-top: 8px;
+	}
+	&__social {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-top: 22px;
+		& li {
+			margin-left: 18px;
+			&:hover {
+				transform: translateX(2px);
+			}
+		}
+	}
+}
